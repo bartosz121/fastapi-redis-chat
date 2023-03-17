@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "chat-backend"
+version = "0.1.0"
+description = ""
+authors = ["bartosz121 <bmagiera121@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "chat_backend" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.94.1"
+uvicorn = { extras = ["standard"], version = "^0.21.1" }
+redis = { extras = ["hiredis"], version = "^4.5.1" }
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.256"
+black = "^23.1.0"
+
+
+[tool.poetry.scripts]
+run_app = "chat_backend.main:run"
+
+
+[tool.ruff]
+line-length = 88
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
