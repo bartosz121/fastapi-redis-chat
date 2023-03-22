@@ -10,7 +10,8 @@ packages = [{ include = "chat_backend" }]
 python = "^3.11"
 fastapi = "^0.94.1"
 uvicorn = { extras = ["standard"], version = "^0.21.1" }
-redis = { extras = ["hiredis"], version = "^4.5.1" }
+redis = {extras = ["hiredis"], version = "^4.5.1"}
+websockets = "^10.4"
 
 
 [tool.poetry.group.dev.dependencies]
